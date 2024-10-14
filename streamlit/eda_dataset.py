@@ -10,7 +10,7 @@ sns.set_style('whitegrid')
 # Função para carregar os dados
 @st.cache
 def load_data():
-    url = 'WA_Fn-UseC_-Telco-Customer-Churn.csv'
+    url = '../env/dataset/WA_Fn-UseC_-Telco-Customer-Churn.csv'
     data = pd.read_csv(url)
     data['TotalCharges'] = pd.to_numeric(data['TotalCharges'], errors='coerce')
     data['SeniorCitizen'] = data['SeniorCitizen'].replace({1: 'Yes', 0: 'No'})
